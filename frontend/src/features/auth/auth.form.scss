@@ -14,10 +14,16 @@ main{
     gap: 1.5rem;
   }
 
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;  
+  }
+
   .input-group{
     display:flex;
     flex-direction: column;
-    
+
     gap: 0.75rem;
 
     input{

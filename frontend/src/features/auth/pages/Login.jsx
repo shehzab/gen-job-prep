@@ -1,12 +1,20 @@
 import React from 'react'
 import "../auth.form.scss"
+import { useNavigate } from 'react-router'
 
 const Login = () => {
+
+  const navigate = useNavigate()
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+  }
+
+
   return (
     <main>
       <div className="form-container">
       <h1>Login</h1>
-      <form action="">
+      <form onSubmit={handleSubmit}>
 
 
         <div className="input-group">
@@ -21,6 +29,8 @@ const Login = () => {
         <button className='button primary-button' type='submit'>Login</button>
 
       </form>
+
+      <p>Don't have an account? <button className='button' onClick={() => navigate('/register')}>Register</button></p>
       </div>
     </main>
   )
